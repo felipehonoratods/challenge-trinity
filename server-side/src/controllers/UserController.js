@@ -29,11 +29,11 @@ module.exports = {
   },
 
   async show(req, res) {
-    const { user_email } = req.params;
+    const { user_id } = req.params;
 
     const user = await User.findAll({
       where: {
-        email: user_email
+        id: user_id
       }
     })
 
